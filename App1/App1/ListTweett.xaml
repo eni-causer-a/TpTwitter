@@ -22,7 +22,7 @@
             </ContentView>
             <ContentView x:Name="tweetList" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
                 <ScrollView HorizontalOptions="FillAndExpand">
-                    <ListView x:Name="tweetListList">
+                    <ListView x:Name="tweetListList" RowHeight="200">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
