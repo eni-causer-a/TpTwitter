@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  xmlns:views="clr-namespace:App1"
+             mc:Ignorable="d"
+             x:Class="App1.MainPage">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <ContentView BackgroundColor="#58B0F0" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <views:Header/>
+        </ContentView>
+        <ContentView x:Name="connectionForm" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <StackLayout>
+                <Label Text="Connexion à twitter" TextColor="Gray" HorizontalOptions="CenterAndExpand"></Label>
+                <Entry x:Name="identifiant" Placeholder="Identifiant twitter" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="motDePasse" Placeholder="Mot de passe" IsPassword="True" HorizontalOptions="FillAndExpand"/>
+                <StackLayout Orientation="Horizontal">
+                    <Switch x:Name="memorise"/>
+                    <Label Text="Mémoriser mes informations" TextColor="Gray" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <Label x:Name="errorLabel" TextColor="DarkRed"/>
+                <Button x:Name="btnConnexion" Text="SE CONNECTER" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ContentView>
+
+        <ContentView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <views:Footer/>
+        </ContentView>
+
+    </Grid>
+
+</ContentPage>
